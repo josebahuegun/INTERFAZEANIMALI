@@ -19,6 +19,8 @@ public class GehituAnimalia extends Application{
         Button btnGehitu = new Button("GEHITU");
 
         VBox layout = new VBox();
+
+        layout.getChildren().addAll(titulua, btnGehitu);
     }
 
 
