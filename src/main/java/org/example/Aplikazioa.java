@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.Button  ;
 
 public class Aplikazioa extends Application {
 
@@ -13,8 +14,12 @@ public class Aplikazioa extends Application {
 
         Label titulo = new Label("ANIMALIEN BABESLEKUA");
 
+        Button btnGehitu = new Button("Animaliak gehitu");
+
+        btnGehitu.setOnAction(event -> titulo.setText("ANIMALIAK GEHITU"));
+
         VBox layout = new VBox(20);
-        layout.getChildren().add(titulo);
+        layout.getChildren().addAll(titulo, btnGehitu);
 
         Scene scene = new Scene(layout, 600, 400);
 
