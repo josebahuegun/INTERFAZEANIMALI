@@ -6,13 +6,15 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.control.Label;
 
-import java.awt.*;
 
-public class GehituAnimalia extends Application{
 
-    @Override
-    public void start(Stage stage) {
+public class GehituAnimalia{
+
+
+    public static void erakutsi() {
+        Stage stage = new Stage();
 
         Label titulua = new Label("ANIMALIAK GEHITU");
 
@@ -21,10 +23,10 @@ public class GehituAnimalia extends Application{
         VBox layout = new VBox();
 
         layout.getChildren().addAll(titulua, btnGehitu);
-    }
 
+        Scene scene = new Scene(layout);
 
-    public static void main(String[] args) {
-        launch();
+        stage.setScene(scene);
+        stage.show();
     }
 }

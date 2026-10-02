@@ -16,7 +16,10 @@ public class Aplikazioa extends Application {
 
         Button btnGehitu = new Button("Animaliak gehitu");
 
-        btnGehitu.setOnAction(event -> titulo.setText("ANIMALIAK GEHITU"));
+        btnGehitu.setOnAction(event -> {
+            GehituAnimalia.erakutsi();
+            titulo.setText("ANIMALIEN BABESLEKUA");
+        });
 
         VBox layout = new VBox(20);
         layout.getChildren().addAll(titulo, btnGehitu);
