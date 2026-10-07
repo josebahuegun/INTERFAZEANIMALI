@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 public class GehituAnimalia{
 
 
-    public static void erakutsi() {
+    public static void erakutsi(Babeslekua babeslekua) {
         Stage stage = new Stage();
 
         Label titulua = new Label("ANIMALIAK GEHITU");
