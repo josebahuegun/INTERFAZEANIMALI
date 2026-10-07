@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 
 
@@ -18,11 +19,14 @@ public class GehituAnimalia{
 
         Label titulua = new Label("ANIMALIAK GEHITU");
 
+        TextField txtIzena = new TextField();
+        txtIzena.setPromptText("Izena");
+
         Button btnGehitu = new Button("GEHITU");
 
         VBox layout = new VBox();
 
-        layout.getChildren().addAll(titulua, btnGehitu);
+        layout.getChildren().addAll(titulua, txtIzena, btnGehitu);
 
         Scene scene = new Scene(layout);
 
