@@ -1,20 +1,16 @@
 package org.example;
 
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-
-
-public class GehituAnimalia{
-
+public class GehituAnimalia {
 
     public static void erakutsi(Babeslekua babeslekua) {
+
         Stage stage = new Stage();
 
         Label titulua = new Label("ANIMALIAK GEHITU");
@@ -22,14 +18,37 @@ public class GehituAnimalia{
         TextField txtIzena = new TextField();
         txtIzena.setPromptText("Izena");
 
+        TextField txtEspeziea = new TextField();
+        txtEspeziea.setPromptText("Espeziea");
+
+        TextField txtAdina = new TextField();
+        txtAdina.setPromptText("Adina");
+
+        TextField txtPisua = new TextField();
+        txtPisua.setPromptText("Pisua");
+
         Button btnGehitu = new Button("GEHITU");
 
-        VBox layout = new VBox();
+        btnGehitu.setOnAction(event -> {
 
-        layout.getChildren().addAll(titulua, txtIzena, btnGehitu);
+            String izena = txtIzena.getText();
 
-        Scene scene = new Scene(layout);
+            String espeziea = txtEspeziea.getText();
 
+            int adina = Integer.parseInt(txtAdina.getText());
+
+            double pisua = Double.parseDouble(txtPisua.getText());
+
+        });
+
+        VBox layout = new VBox(10);
+
+        layout.getChildren().addAll(titulua, txtIzena, txtEspeziea, txtAdina, txtPisua, btnGehitu
+        );
+
+        Scene scene = new Scene(layout, 300, 300);
+
+        stage.setTitle("Gehitu animalia");
         stage.setScene(scene);
         stage.show();
     }
