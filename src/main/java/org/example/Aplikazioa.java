@@ -41,7 +41,7 @@ public class Aplikazioa extends Application {
         });
 
         btnEzabatu.setOnAction(event -> {
-            EzabatuAnimalia.erakutsi();
+            EzabatuAnimalia.erakutsi(babeslekua);
         });
 
         btnBilatu.setOnAction(event -> {
@@ -53,10 +53,12 @@ public class Aplikazioa extends Application {
         });
 
         btnSoinuak.setOnAction(event -> {
-            EginSoinuak.erakutsi();
+            EginSoinuak.erakutsi(babeslekua);
         });
 
-
+        btnIrten.setOnAction(event -> {
+            stage.close();
+        });
 
 
         VBox layout = new VBox(20);
