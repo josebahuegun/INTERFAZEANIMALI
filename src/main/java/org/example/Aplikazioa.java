@@ -37,7 +37,7 @@ public class Aplikazioa extends Application {
         });
 
         btnAdoptatu.setOnAction(event -> {
-            AdoptatuAnimalia.erakutsi();
+            AdoptatuAnimalia.erakutsi(babeslekua);
         });
 
         btnEzabatu.setOnAction(event -> {

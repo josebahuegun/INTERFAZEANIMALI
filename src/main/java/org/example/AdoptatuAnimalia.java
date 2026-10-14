@@ -3,24 +3,47 @@ package org.example;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class AdoptatuAnimalia {
 
-    public static void erakutsi() {
+    public static void erakutsi(Babeslekua babeslekua) {
+
         Stage stage = new Stage();
 
         Label titulua = new Label("ANIMALIAK ADOPTATU");
 
+        TextField txtIzena = new TextField();
+        txtIzena.setPromptText("Sartu animaliaren izena");
+
         Button btnAdoptatu = new Button("ADOPTATU");
 
-        VBox layout = new VBox();
+        btnAdoptatu.setOnAction(event -> {
 
-        layout.getChildren().addAll(titulua, btnAdoptatu);
+            String izena = txtIzena.getText();
 
-        Scene scene = new Scene(layout);
+            Animalia animalia = babeslekua.bilatuAnimalia(izena);
 
+            if (animalia != null) {
+
+                babeslekua.adoptatuAnimalia(izena);
+
+                stage.close();
+
+            } else {
+                    System.out.println("Ez da animalia aurikitu");
+            }
+        });
+
+        VBox layout = new VBox(10);
+        layout.getChildren().addAll(titulua, txtIzena, btnAdoptatu);
+
+        Scene scene = new Scene(layout, 300, 200);
+
+        stage.setTitle("Adoptatu animalia");
         stage.setScene(scene);
         stage.show();
     }
