@@ -45,11 +45,11 @@ public class Aplikazioa extends Application {
         });
 
         btnBilatu.setOnAction(event -> {
-            BilatuAnimalia.erakutsi();
+            BilatuAnimalia.erakutsi(babeslekua);
         });
 
         btnErakutsi.setOnAction(event -> {
-            ErakutsiAnimaliak.erakutsi();
+            ErakutsiAnimaliak.erakutsi(babeslekua);
         });
 
         btnSoinuak.setOnAction(event -> {

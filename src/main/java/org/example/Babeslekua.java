@@ -50,6 +50,9 @@ public class Babeslekua {
             System.out.println(animalia);
         }
     }
+    public ArrayList<Animalia> getAnimaliak() {
+        return animaliak;
+    }
 
     public void eginSoinuak(){
         for (Animalia animalia : animaliak) {
