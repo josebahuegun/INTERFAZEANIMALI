@@ -19,6 +19,8 @@ public class Aplikazioa extends Application {
 
         babeslekua = new Babeslekua();
 
+        babeslekua.kargatuAnimaliak();
+
         Label titulo = new Label("ANIMALIEN BABESLEKUA");
 
         Button btnGehitu = new Button("Gehitu animaliak");

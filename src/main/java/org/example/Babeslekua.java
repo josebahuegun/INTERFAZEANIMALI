@@ -53,6 +53,11 @@ public class Babeslekua {
     public ArrayList<Animalia> getAnimaliak() {
         return animaliak;
     }
+    public void kargatuAnimaliak() {
+        AnimalDAO dao = new AnimalDAO();
+        animaliak.clear();
+        animaliak.addAll(dao.lortuAnimaliak());
+    }
 
     public void eginSoinuak(){
         for (Animalia animalia : animaliak) {

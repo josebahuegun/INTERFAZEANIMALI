@@ -23,6 +23,10 @@ public class EzabatuAnimalia {
         btnEzabatu.setOnAction(event -> {
             String izena = txtIzena.getText();
             babeslekua.ezabatuAnimalia(izena);
+
+            AnimalDAO dao = new AnimalDAO();
+            dao.ezabatuAnimalia(izena);
+
             stage.close();
         });
 

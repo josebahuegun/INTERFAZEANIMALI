@@ -31,6 +31,9 @@ public class AdoptatuAnimalia {
 
                 babeslekua.adoptatuAnimalia(izena);
 
+                AnimalDAO dao = new AnimalDAO();
+                dao.adoptatuAnimalia(izena);
+
                 stage.close();
 
             } else {

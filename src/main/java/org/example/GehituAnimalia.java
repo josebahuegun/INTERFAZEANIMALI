@@ -64,6 +64,9 @@ public class GehituAnimalia {
 
                 babeslekua.gehituAnimalia(animalia);
 
+                AnimalDAO dao = new AnimalDAO();
+                dao.gehituAnimalia(animalia, mota);
+
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION);
                 alerta.setContentText("Animalia ondo gehitu da!");
                 alerta.showAndWait();
